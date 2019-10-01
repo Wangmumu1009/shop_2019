@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import '@/assets/css/reset.css'//@指的是src文件
+import '@/assets/js/rem.js'
+
 new Vue({
   router,
   store,

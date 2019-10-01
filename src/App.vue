@@ -1,29 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>  
+    <ul class="footer-bar">
+      <li class="footer-bar-item">
+        <router-link to="/">首页</router-link>
+      </li>
+      <li class="footer-bar-item">
+        <router-link to="/catogory">分类</router-link>
+      </li>
+      <li class="footer-bar-item">
+        <router-link to="/profile">我的</router-link>
+      </li>
+      <li class="footer-bar-item">
+        <router-link to="/cart">购物车</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.footer-bar{
+  display: flex;
+  background: #eeeeeeee;
+  position: fixed;//固定定位会脱离文档流，如果不设置宽度就会挤在一起
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;//文字垂直居中
+  &-item{
+    flex-grow: 1;
+    text-align: center
   }
 }
 </style>
