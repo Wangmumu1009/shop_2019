@@ -18,6 +18,8 @@ Vue.use(Button).use(Icon).use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use
 
 // Vue.use(Vant);
 
+import '@/mock/mock.js';
+
 new Vue({
   router,
   store,
